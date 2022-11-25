@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Mapper</title>
+    </head>
+    <body>
+        <a href="{% url 'index' %}">Главная</a>
+        <a href="{% url 'new_student' %}">Новый студент</a>
+        {% for i in students %}
+            <h1>Имя: {{i.first_name}}</h1>
+            <h2>Фамилия: {{i.last_name}}</h2>
+            <p>Курс: {{i.course}}</p>
+            <hr>
+        {% endfor %}
+    </body>
+</html>

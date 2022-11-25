@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Data Mapper</title>
+    </head>
+    <body>
+        <a href="{% url 'index' %}">Главная</a>
+        <a href="{% url 'new_student' %}">Новый студент</a>
+        <form method="post">
+            {% csrf_token %}
+            <input placeholder="Имя" type="text" name="first_name">
+            <input placeholder="Фамилия" type="text" name="last_name">
+            <input placeholder="Курс" type="number" name="course">
+            <button type="submit">Добавить</button>
+        </form>
+    </body>
+</html>
